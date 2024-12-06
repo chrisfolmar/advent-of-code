@@ -1,6 +1,6 @@
 require 'set'
 
-def parse_grid_file(filename)
+def parse_file(filename)
   grid = []
   start_x, start_y = nil, nil
 
@@ -58,7 +58,6 @@ def simulate_traversal_with_obstruction(grid, start_x, start_y, start_direction,
   visited_states = Set.new
 
   while true
-    # Store the current state as a tuple (x, y, direction)
     state = [x, y, direction]
     # If this state has been visited before, it's a loop
     if visited_states.include?(state)
@@ -110,10 +109,9 @@ def count_loop_positions(grid, start_x, start_y)
   loop_count
 end
 
-# Test with the provided input
-filename = "input_6.txt" # Replace with your file path
+filename = "input_6.txt" 
 begin
-  grid, start_x, start_y = parse_grid_file(filename)
+  grid, start_x, start_y = parse_file(filename)
   puts "Starting location: (#{start_x}, #{start_y}), direction: Up"
 
   # Count loop positions
