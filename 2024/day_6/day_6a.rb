@@ -40,7 +40,6 @@ end
 def traverse_grid(grid, start_x, start_y, direction)
   x, y = start_x, start_y
   visited = Set.new([[x, y]])
-  spaces_visited = 1
 
   loop do
     # Move in the current direction
@@ -60,7 +59,6 @@ def traverse_grid(grid, start_x, start_y, direction)
       # Check if the new position has been visited before
       unless visited.include?([new_x, new_y])
         visited.add([new_x, new_y])
-        spaces_visited += 1
       end
       x, y = new_x, new_y # Move to the new position
     else
@@ -70,7 +68,7 @@ def traverse_grid(grid, start_x, start_y, direction)
     end
   end
 
-  spaces_visited
+  visited.size
 end
 
 filename = "input_6.txt"
