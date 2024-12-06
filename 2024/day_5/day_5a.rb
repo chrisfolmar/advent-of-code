@@ -59,7 +59,7 @@ def process_file(filename)
 end
 
 # Test with the provided input
-filename = "input_5.txt" # Replace with your file path
+filename = "input_5.txt"
 result = process_file(filename)
 
 puts "Summation of middle digits from correct lines: #{result}"
