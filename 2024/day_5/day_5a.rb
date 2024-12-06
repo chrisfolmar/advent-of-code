@@ -58,7 +58,6 @@ def process_file(filename)
   middle_values.sum
 end
 
-# Test with the provided input
 filename = "input_5.txt"
 result = process_file(filename)
 
