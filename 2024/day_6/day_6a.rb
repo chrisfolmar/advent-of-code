@@ -1,7 +1,7 @@
 require 'set'
 
 # Function to parse the grid file
-def parse_grid_file(filename)
+def parse_file(filename)
   grid = []
   start_x, start_y = nil, nil
 
@@ -73,10 +73,9 @@ def traverse_grid(grid, start_x, start_y, direction)
   spaces_visited
 end
 
-# Test with the provided input
-filename = "input_6.txt" # Replace with your file path
+filename = "input_6.txt"
 begin
-  grid, start_x, start_y = parse_grid_file(filename)
+  grid, start_x, start_y = parse_file(filename)
   puts "Starting location: (#{start_x}, #{start_y}), direction: Up"
 
   # Start traversal at the position of `^` facing :up
