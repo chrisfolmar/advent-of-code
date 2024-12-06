@@ -1,4 +1,4 @@
-def parse_input_file(filename)
+def parse_input(filename)
   order = {}
   pages = []
 
@@ -48,7 +48,7 @@ def sort_with_order(order, page)
 end
 
 def process_file(filename)
-  order, pages = parse_input_file(filename)
+  order, pages = parse_input(filename)
 
   middle_values = []
 
@@ -74,9 +74,7 @@ def process_file(filename)
   middle_values.sum
 end
 
-# Test with the provided input
-
-filename = "input_5.txt" # Replace with your file path
+filename = "input_5.txt"
 result = process_file(filename)
 
 puts "Summation of middle digits from invalid Page lists: #{result}"
